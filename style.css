@@ -6,7 +6,7 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-family: 'Forum','cursive';
+  font-family: 'Forum';
 }
 
 body {
@@ -310,6 +310,9 @@ footer {
 
 /* Responsive */
 @media (max-width: 768px) {
+  body{
+    font-family: sans-serif;
+  }
   .menu-toggle {
     display: block;
     position: absolute;
@@ -323,7 +326,7 @@ footer {
     flex-direction: column;
     background: #8B0000;
     position: absolute;
-    top: 60px;
+    top: 45px;
     left: 0;
     width: 100%;
     text-align: center;
@@ -358,10 +361,10 @@ footer {
   .abt-aln{
     flex-direction: column;
     margin: 0;
+    align-items: center;
   }
   .abt-res{
     align-items: center;
-    background-color: #8B0000;
     width: 280px;
   }
   .abt-res img{
