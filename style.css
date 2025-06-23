@@ -13,6 +13,14 @@ body {
   line-height: 1.6;
 }
 
+.menu-toggle {
+  display: none;
+  font-size: 28px;
+  cursor: pointer;
+  color: #fff;
+}
+
+
 header {
   background:#8B0000;
   color:#fff;
@@ -46,6 +54,9 @@ header nav a.order-btn {
 .container {
   max-width:1000px;
   margin:auto;
+}
+.container h1{
+  font-size: 18px;
 }
 
 .hero {
@@ -299,6 +310,33 @@ footer {
 
 /* Responsive */
 @media (max-width: 768px) {
+  .menu-toggle {
+    display: block;
+    position: absolute;
+    top: 5px;
+    right: 20px;
+    z-index: 1000;
+  }
+
+  header nav {
+    display: none;
+    flex-direction: column;
+    background: #8B0000;
+    position: absolute;
+    top: 60px;
+    left: 0;
+    width: 100%;
+    text-align: center;
+    padding: 10px 0;
+  }
+
+  header nav.active {
+    display: flex;
+  }
+
+  header nav a {
+    margin: 10px 0;
+  }
   .nav-links {
     flex-direction: column;
     gap: 10px;
@@ -319,16 +357,20 @@ footer {
   }
   .abt-aln{
     flex-direction: column;
+    margin: 0;
   }
   .abt-res{
     align-items: center;
+    background-color: #8B0000;
+    width: 280px;
   }
   .abt-res img{
-    width: 300px;
+    width: 280px;
+    margin-left: 0;
   }
   .abt-im img{
-    width: 300px;
-    height: 200px;
+    width: 280px;
+    height: 190px;
     margin-left: 0;
   }
   .feedback{
